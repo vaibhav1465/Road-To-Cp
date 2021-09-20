@@ -6,11 +6,16 @@ public class FirstProgram{
         // System.out.print("true");
         // else
         // System.out.print("false");
-        // long a=13;
+        long a=1366666666666666666L;
         // short b=(short)135555;
-        // System.out.print(b);
-        float c=12.65f;
-        int d=(int)c;
-        System.out.print(d);
+        System.out.print(a);
+        // float c=12.65f;
+        // int d=(int)c;
+        // System.out.print(d);
+        // char a='a';
+        // a++;
+        // System.out.println(a);
+        // int b=a+1;
+        // System.out.println(b);
     }
 }
