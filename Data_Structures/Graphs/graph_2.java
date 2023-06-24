@@ -94,11 +94,6 @@ class graph_2{
             q.add(i);
             bfs(graph,vis,q);
         }
-        // System.out.print("\n\n\n" + i + "\n");
-        // for(int j=0;j<V;j++){
-        //     System.out.print(vis[j]+" ");
-        // }
-        // System.out.println();
         }
        System.out.println();
         
