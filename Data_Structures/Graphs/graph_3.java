@@ -71,7 +71,7 @@ public class graph_3 {
         ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
 
-        // Breadth-First Search
+        // Depth-First Search
  
         boolean[] vis = new boolean[V];
 
