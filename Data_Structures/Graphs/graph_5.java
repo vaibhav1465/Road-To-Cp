@@ -82,26 +82,21 @@ public class graph_5 {
 
     return false;
    }
-   public static boolean cycle_detection_undirected(ArrayList<Edge> graph[],boolean[] vis,int curr,int par, boolean[] recursive_stack){
+   public static boolean cycle_detection_undirected(ArrayList<Edge> graph[],boolean[] vis,int curr, boolean[] recursive_stack){
 
     vis[curr] = true;
     recursive_stack[curr]= true;
-    System.out.println(curr +"=============="+ par);
-    for(int i=0;i<vis.length;i++){
-        System.out.print(vis[i]+" ");
-    }
-    System.out.println();
 
     for(int i=0; i<graph[curr].size() ;i++){
         Edge e = graph[curr].get(i);
         int neigh = e.dest;
-        if(vis[neigh] && neigh!=par && recursive_stack[neigh]){
-            System.out.println(curr +"======="+neigh+"======="+ par);
+        if(recursive_stack[neigh]){
+            System.out.println(curr +"======="+neigh);
          return true;
         }
         else if(!vis[neigh]){
-            if(cycle_detection_undirected(graph, vis, neigh,curr,recursive_stack)){
-                System.out.println(curr +"======="+neigh+"======="+ par);
+            if(cycle_detection_undirected(graph, vis, neigh,recursive_stack)){
+                System.out.println(curr +"======="+neigh);
                 return true;
             }
         }
@@ -131,7 +126,7 @@ public class graph_5 {
         // Cycle Detection for Directed Graph
         boolean[] recursive_stack = new boolean[V];
         for(int i=0;i<V;i++){
-            if(!vis[i] && cycle_detection_undirected(graph, vis, i,-1,recursive_stack)){
+            if(!vis[i] && cycle_detection_undirected(graph, vis, i,recursive_stack)){
               System.out.println("Cycle Found");
               break;
             }
