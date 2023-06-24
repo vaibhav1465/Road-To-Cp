@@ -17,34 +17,34 @@ public class graph_5 {
             graph[i]=new ArrayList<Edge>();
        }
 
-       graph[0].add(new Edge(0, 1, 0));
-    //    graph[0].add(new Edge(0, 3, 0));
+    //    graph[0].add(new Edge(0, 1, 0));
+       graph[0].add(new Edge(0, 3, 0));
     //    graph[0].add(new Edge(0, 6, 0));
 
 
        graph[1].add(new Edge(1, 0, 0));
-       graph[1].add(new Edge(1, 2, 0));
+    //    graph[1].add(new Edge(1, 2, 0));
 
 
-       graph[2].add(new Edge(2, 1, 0));
-       graph[2].add(new Edge(2, 4, 0));
-       graph[2].add(new Edge(2, 5, 0));
+       graph[2].add(new Edge(2, 0, 0));
+    //    graph[2].add(new Edge(2, 4, 0));
+    //    graph[2].add(new Edge(2, 5, 0));
     
 
-    //    graph[3].add(new Edge(3, 0, 0));
-       graph[3].add(new Edge(3, 4, 0));
+       graph[3].add(new Edge(3, 0, 0));
+       graph[3].add(new Edge(3, 2, 0));
     
 
-       graph[4].add(new Edge(4, 2, 0));
-       graph[4].add(new Edge(4, 3, 0));
-       graph[4].add(new Edge(4, 5, 0));
+    //    graph[4].add(new Edge(4, 2, 0));
+    //    graph[4].add(new Edge(4, 3, 0));
+    //    graph[4].add(new Edge(4, 5, 0));
 
-       graph[5].add(new Edge(5, 2, 0));
-       graph[5].add(new Edge(5, 4, 0));
-       graph[5].add(new Edge(5, 6, 0));
+    //    graph[5].add(new Edge(5, 2, 0));
+    //    graph[5].add(new Edge(5, 4, 0));
+    //    graph[5].add(new Edge(5, 6, 0));
 
-    //    graph[6].add(new Edge(6, 0, 0));
-       graph[6].add(new Edge(6, 5, 0));
+    // //    graph[6].add(new Edge(6, 0, 0));
+    //    graph[6].add(new Edge(6, 5, 0));
        
     }
  
@@ -82,25 +82,62 @@ public class graph_5 {
 
     return false;
    }
+   public static boolean cycle_detection_undirected(ArrayList<Edge> graph[],boolean[] vis,int curr,int par, boolean[] recursive_stack){
+
+    vis[curr] = true;
+    recursive_stack[curr]= true;
+    System.out.println(curr +"=============="+ par);
+    for(int i=0;i<vis.length;i++){
+        System.out.print(vis[i]+" ");
+    }
+    System.out.println();
+
+    for(int i=0; i<graph[curr].size() ;i++){
+        Edge e = graph[curr].get(i);
+        int neigh = e.dest;
+        if(vis[neigh] && neigh!=par && recursive_stack[neigh]){
+            System.out.println(curr +"======="+neigh+"======="+ par);
+         return true;
+        }
+        else if(!vis[neigh]){
+            if(cycle_detection_undirected(graph, vis, neigh,curr,recursive_stack)){
+                System.out.println(curr +"======="+neigh+"======="+ par);
+                return true;
+            }
+        }
+
+    }
+    recursive_stack[curr]=false; 
+
+    return false;
+   }
 
 
     
     public static void main(String[] args) {
-        int V=7;
+        int V=4;
         ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
         boolean[] vis = new boolean[V];
           
         // Cycle Detection for Undirected Graph
-        for(int i=0;i<V;i++){
-           if(!vis[i] && cycle_detection_directed(graph, vis, i,-1)){
-             System.out.println("Cycle Found");
-             break;
-           }
-        }
+        // for(int i=0;i<V;i++){
+        //    if(!vis[i] && cycle_detection_directed(graph, vis, i,-1)){
+        //      System.out.println("Cycle Found");
+        //      break;
+        //    }
+        // }
 
         // Cycle Detection for Directed Graph
-        
+        boolean[] recursive_stack = new boolean[V];
+        for(int i=0;i<V;i++){
+            if(!vis[i] && cycle_detection_undirected(graph, vis, i,-1,recursive_stack)){
+              System.out.println("Cycle Found");
+              break;
+            }
+         }
+
+
     }
 
 }
