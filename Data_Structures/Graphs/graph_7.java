@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-class Algorithm_1 {
+class graph_7 {
 
     static class Edge {
         int dest;
