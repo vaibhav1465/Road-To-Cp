@@ -57,8 +57,13 @@ class graph_2{
         }
     }
 
-    public static void bfs(ArrayList<Edge> graph[],boolean[] vis,Queue<Integer> q){
+    public static void bfs(ArrayList<Edge> graph[],boolean[] vis,int start){
+ 
+    Queue<Integer> q = new LinkedList<>();
 
+    q.add(start);
+
+    
      while(!q.isEmpty()){
       int curr = q.remove();
       if(!vis[curr]){
@@ -85,14 +90,10 @@ class graph_2{
         // Breadth-First Search
  
         boolean[] vis = new boolean[V];
-        Queue<Integer> q = new LinkedList<>();
-
-
-
+    
         for(int i=0;i<V;i++){
             if(!vis[i]){
-            q.add(i);
-            bfs(graph,vis,q);
+            bfs(graph,vis,i);
         }
         }
        System.out.println();
