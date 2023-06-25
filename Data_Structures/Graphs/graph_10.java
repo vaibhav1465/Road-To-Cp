@@ -116,11 +116,11 @@ public class graph_10 {
          }
 
 
-         System.out.println("Topological Sorting");
-         while(!top_sort.empty()){
-          System.out.print(top_sort.pop()+" ");
-         }
-         System.out.println();
+        //  System.out.println("Topological Sorting");
+        //  while(!top_sort.empty()){
+        //   System.out.print(top_sort.pop()+" ");
+        //  }
+        //  System.out.println();
 
          ArrayList<Edge> tranpose[] = transpose_graph(graph,V);
 
@@ -135,9 +135,10 @@ public class graph_10 {
         }
 
 
-        for(int i=0;i<V;i++){
-            if(!vis[i]){
-               dfs(tranpose, i, vis);
+        while(!top_sort.empty()){
+            int curr = top_sort.pop();
+            if(!vis[curr]){
+               dfs(tranpose, curr, vis);
                System.out.println("---------");
         }
         }
