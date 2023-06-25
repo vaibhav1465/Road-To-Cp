@@ -34,8 +34,8 @@ public class graph_12 {
        graph[3].add(new Edge(3, 4, 0));
     //    graph[3].add(new Edge(3, 5, 0));
 
+    //    graph[4].add(new Edge(4, 2, 0));
        graph[4].add(new Edge(4, 3, 0));
-    //    graph[4].add(new Edge(4, 5, 0));
 
     //    graph[5].add(new Edge(5, 3, 0));
     //    graph[5].add(new Edge(5, 4, 0));
@@ -56,10 +56,12 @@ public class graph_12 {
         }
     }
 
-    public static void dfs(ArrayList<Edge> graph[],int curr,int par,boolean[] vis,int[] dist,int[] low,int time){
+    public static void dfs(ArrayList<Edge> graph[],int curr,int par,boolean[] vis,int[] dist,int[] low,int time,
+                           boolean[] articulation_point){
  
         vis[curr] = true;
         dist[curr]=low[curr]=++time;
+        int children=0;
         // System.out.println(par+"------>----"+curr+" time--> "+time);
         // System.out.println("dt of current ->  "+dist[curr]+" low of current -> "+low[curr]);
         // System.out.println();
@@ -68,15 +70,15 @@ public class graph_12 {
             Edge e = graph[curr].get(i);
             int neigh = e.dest;
             if(!vis[neigh]){
-              dfs(graph, neigh,curr, vis,dist,low,time);
+              dfs(graph, neigh,curr, vis,dist,low,time,articulation_point);
               low[curr]=Math.min(low[curr], low[neigh]);
             //   System.out.println("Backtracting  curr  - > " + curr + " neigh ---> "+ neigh);
             //   System.out.println("dt of current ->  "+dist[curr]+" low of neigh -> "+low[neigh]);
             //   System.out.println();
-
-              if(dist[curr]<low[neigh]){
-               System.out.println("Bridge Found --------"+curr+"---> "+neigh);
-              }
+            if(dist[curr]<=low[neigh] && par!=-1){
+               articulation_point[curr]=true;
+            }
+            children++;
             }else if(vis[neigh] && neigh!=par){
             //   System.out.println("Back Edge curr  - > " + curr + " neigh ---> "+ neigh);
             //   System.out.println("low of current ->  "+low[curr]+" dt of neigh -> "+dist[neigh]);
@@ -84,8 +86,11 @@ public class graph_12 {
 
               low[curr]=Math.min(low[curr], dist[neigh]);
             }
-
         }
+            if(par==-1 && children>1){
+                articulation_point[curr]=true;
+            }
+        
 
     }
 
@@ -99,10 +104,16 @@ public class graph_12 {
         boolean[] vis = new boolean[V];
         int[] dist    = new int[V];
         int[] low    = new int[V];
+        boolean[] articulation_point = new boolean[V];
         for(int i=0;i<V;i++){
             if(!vis[i]){
-            dfs(graph,i,-1,vis,dist,low,0);
+            dfs(graph,i,-1,vis,dist,low,0,articulation_point);
         }
+        }
+        for(int i=0;i<V;i++){
+            if(articulation_point[i]){
+                System.out.println(i);
+            }
         }
        System.out.println();
         
