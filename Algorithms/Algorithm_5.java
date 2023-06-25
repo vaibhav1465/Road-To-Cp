@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class graph_11 {
+public class Algorithm_5 {
     static class Edge {
         int dest;
         int src;
