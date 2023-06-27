@@ -26,3 +26,7 @@ Path: A sequence of vertices connected by edges. It represents a route or a seri
 Cycle: A path that starts and ends at the same vertex, forming a closed loop.
 
 Connected Graph: A graph where there is a path between every pair of vertices. In other words, there are no isolated vertices.
+
+Disconnected Graph: A graph that consists of two or more connected components, where there is no path between vertices in different components.
+
+Directed Acyclic Graph (DAG): A directed graph that contains no cycles.
