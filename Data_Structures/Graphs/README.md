@@ -16,3 +16,7 @@ Here are some key terms used when discussing graphs:
 Vertex (Node): A fundamental unit of a graph. It represents an entity or an object. Vertices are often labeled with unique identifiers or values.
 
 Edge: A connection between two vertices. It represents the relationship or connection between the entities represented by the vertices. Edges can be directed (one-way) or undirected (two-way).
+
+Weight: An optional value associated with an edge, indicating the cost, distance, or any other relevant metric associated with traversing that edge.
+
+Degree: The number of edges incident to a vertex. In a directed graph, the degree is further divided into in-degree (number of incoming edges) and out-degree (number of outgoing edges).
