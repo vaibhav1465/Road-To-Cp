@@ -12,3 +12,6 @@ Algorithms for finding minimum spanning trees, such as Prim's algorithm.
 
 Terminology
 Here are some key terms used when discussing graphs:
+
+Vertex (Node): A fundamental unit of a graph. It represents an entity or an object. Vertices are often labeled with unique identifiers or values.
+
