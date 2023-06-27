@@ -30,3 +30,8 @@ Connected Graph: A graph where there is a path between every pair of vertices. I
 Disconnected Graph: A graph that consists of two or more connected components, where there is no path between vertices in different components.
 
 Directed Acyclic Graph (DAG): A directed graph that contains no cycles.
+
+Graph Algorithms
+Graph algorithms are a set of techniques used to analyze and manipulate graphs. Here are some commonly used graph algorithms:
+
+Depth-First Search (DFS): Traverses a graph by exploring as far as possible along each branch before backtracking. It is often used to explore or search a graph, find connected components, detect cycles, and more.
