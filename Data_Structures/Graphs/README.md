@@ -20,3 +20,9 @@ Edge: A connection between two vertices. It represents the relationship or conne
 Weight: An optional value associated with an edge, indicating the cost, distance, or any other relevant metric associated with traversing that edge.
 
 Degree: The number of edges incident to a vertex. In a directed graph, the degree is further divided into in-degree (number of incoming edges) and out-degree (number of outgoing edges).
+
+Path: A sequence of vertices connected by edges. It represents a route or a series of connections from one vertex to another.
+
+Cycle: A path that starts and ends at the same vertex, forming a closed loop.
+
+Connected Graph: A graph where there is a path between every pair of vertices. In other words, there are no isolated vertices.
