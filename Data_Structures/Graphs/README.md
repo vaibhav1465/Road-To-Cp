@@ -35,3 +35,7 @@ Graph Algorithms
 Graph algorithms are a set of techniques used to analyze and manipulate graphs. Here are some commonly used graph algorithms:
 
 Depth-First Search (DFS): Traverses a graph by exploring as far as possible along each branch before backtracking. It is often used to explore or search a graph, find connected components, detect cycles, and more.
+
+Breadth-First Search (BFS): Traverses a graph by exploring all the vertices at the same level before moving to the next level. It is useful for finding the shortest path, testing graph connectivity, and solving puzzles with an optimal solution.
+
+Dijkstra's Algorithm: Finds the shortest path between two vertices in a graph with non-negative edge weights. It is commonly used in applications such as routing algorithms and network analysis.
