@@ -10,3 +10,5 @@ Traversal algorithms for exploring graphs, such as depth-first search (DFS) and 
 Algorithms for finding the shortest path between two vertices, using Dijkstra's algorithm.
 Algorithms for finding minimum spanning trees, such as Prim's algorithm.
 
+Terminology
+Here are some key terms used when discussing graphs:
