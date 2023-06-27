@@ -39,3 +39,8 @@ Depth-First Search (DFS): Traverses a graph by exploring as far as possible alon
 Breadth-First Search (BFS): Traverses a graph by exploring all the vertices at the same level before moving to the next level. It is useful for finding the shortest path, testing graph connectivity, and solving puzzles with an optimal solution.
 
 Dijkstra's Algorithm: Finds the shortest path between two vertices in a graph with non-negative edge weights. It is commonly used in applications such as routing algorithms and network analysis.
+
+
+Minimum Spanning Tree (MST): Finds a subgraph that connects all the vertices in a graph with the minimum total weight. Prim's algorithm and Kruskal's algorithm are popular algorithms for finding the minimum spanning tree.
+
+Topological Sorting: Orders the vertices of a directed acyclic graph in such a way that for every directed edge (u, v), vertex u comes before vertex v in the ordering. It is often used in task scheduling, dependency resolution, and job sequencing.
