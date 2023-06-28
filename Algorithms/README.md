@@ -27,3 +27,7 @@ Connectivity Algorithms
 Connectivity algorithms are used to determine the connectivity properties of a graph. Two commonly used connectivity algorithms are:
 
 Connected Components: This algorithm identifies the connected components in a graph. It partitions the vertices into subsets such that each subset contains vertices that are reachable from each other but not from vertices in other subsets. It is useful for understanding the overall structure of a graph.
+
+Strongly Connected Components: Strongly connected components (SCCs) are subsets of vertices in a directed graph such that every vertex in the subset is reachable from every other vertex. The algorithm to find SCCs is based on the concept of depth-first search and can be implemented using the Tarjan's algorithm or Kosaraju's algorithm.
+
+These are just a few examples of the many graph algorithms available. Each algorithm has its own characteristics, complexities, and specific use cases. Understanding these algorithms allows you to analyze graphs, solve graph-related problems, and gain insights from graph data structures.
