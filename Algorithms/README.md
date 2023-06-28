@@ -32,10 +32,6 @@ Strongly Connected Components: Strongly connected components (SCCs) are subsets 
 
 These are just a few examples of the many graph algorithms available. Each algorithm has its own characteristics, complexities, and specific use cases. Understanding these algorithms allows you to analyze graphs, solve graph-related problems, and gain insights from graph data structures.
 
-
 Conclusion
 Graph algorithms provide powerful tools for analyzing, traversing, and solving problems on graphs. Whether you need to find the shortest path, determine graph connectivity, explore graph structures, or perform other graph-related tasks, understanding and implementing these algorithms can greatly enhance your ability to work with graphs effectively.
-
-
-
 
