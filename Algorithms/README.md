@@ -22,3 +22,8 @@ A minimum spanning tree (MST) is a subset of the edges of a connected, weighted 
 Prim's Algorithm: Prim's Algorithm starts with an arbitrary vertex and repeatedly adds the minimum weight edge that connects a visited vertex to an unvisited vertex. It grows the MST one vertex at a time until all vertices are included.
 
 Kruskal's Algorithm: Kruskal's Algorithm starts with an empty set of edges and iteratively adds the minimum weight edge that does not create a cycle. It uses a disjoint-set data structure to efficiently determine whether adding an edge will create a cycle.
+
+Connectivity Algorithms
+Connectivity algorithms are used to determine the connectivity properties of a graph. Two commonly used connectivity algorithms are:
+
+Connected Components: This algorithm identifies the connected components in a graph. It partitions the vertices into subsets such that each subset contains vertices that are reachable from each other but not from vertices in other subsets. It is useful for understanding the overall structure of a graph.
