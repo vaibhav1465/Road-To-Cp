@@ -3,3 +3,11 @@ This repository contains a collection of commonly used algorithms implemented in
 
 Graph Algorithms
 This repository provides a collection of graph algorithms implemented in various programming languages. Graph algorithms are designed to solve problems and perform operations on graphs, which are data structures composed of vertices (nodes) and edges (connections). These algorithms enable the analysis, traversal, and manipulation of graphs to extract valuable insights and solve graph-related problems.
+
+Graph Traversal Algorithms
+Graph traversal algorithms are used to visit or explore all the vertices of a graph. They can be classified into two main categories:
+
+Depth-First Search (DFS): This algorithm starts at a given vertex and explores as far as possible along each branch before backtracking. It uses a stack or recursion to keep track of visited vertices. DFS is often used to traverse the entire graph, find connected components, detect cycles, and perform other tasks that involve exploring the graph.
+
+Breadth-First Search (BFS): BFS explores all the vertices at the same level before moving on to the next level. It uses a queue to keep track of visited vertices and their neighbors. BFS is useful for finding the shortest path between two vertices, testing graph connectivity, and solving puzzles with an optimal solution.
+
