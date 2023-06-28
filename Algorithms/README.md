@@ -1,1 +1,2 @@
-Algothrims
+Algorithms
+This repository contains a collection of commonly used algorithms implemented in various programming languages. Algorithms are step-by-step procedures or computational processes used to solve problems or perform specific tasks. This library aims to provide efficient and well-implemented algorithms that can be easily integrated into your projects.
