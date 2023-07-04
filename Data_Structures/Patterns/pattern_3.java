@@ -1,6 +1,6 @@
 package Data_Structures.Patterns;
 
-public class pattern_2 {
+public class pattern_3 {
     public static void main(String[] args) {
         int n=4;
         int m=5;
@@ -18,8 +18,3 @@ public class pattern_2 {
         }
     }
 }
-// * * * * * 
-// *       * 
-// *       * 
-// * * * * * 
-
